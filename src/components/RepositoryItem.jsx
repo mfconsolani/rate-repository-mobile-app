@@ -1,20 +1,18 @@
 import React from 'react';
-import { Text, View} from 'react-native';
+import { Text, View } from 'react-native';
 
 
 const RepositoryItem = ({repositories}) => {
-  console.log(repositories);
-  const { item } = repositories
+  const { item } = repositories;
   return (
     <View>
-      <Text>{item.fullName}</Text>
-      <Text>{item.description}</Text>
-      <Text>{item.language}</Text>
-      <Text>{item.forksCount}</Text>
-      <Text>{item.stargazersCount}</Text>
-      <Text>{item.ratingAverage}</Text>
-      <Text>{item.reviewCount}</Text>
-      <Text>{item.ownerAvatarUrl}</Text>
+      <Text>Full name: {item.fullName}</Text>
+      <Text>Description: {item.description}</Text>
+      <Text>Language: {item.language}</Text>
+      <Text>Stars: {item.forksCount}</Text>
+      <Text>Forks: {item.stargazersCount}</Text>
+      <Text>Rating: {item.ratingAverage}</Text>
+      <Text>Reviews:{item.reviewCount}</Text>
 
     </View>
   );
