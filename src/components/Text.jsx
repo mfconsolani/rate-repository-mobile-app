@@ -21,15 +21,27 @@ const styles = StyleSheet.create({
   fontWeightBold: {
     fontWeight: theme.fontWeights.bold,
   },
+  marginOne: {
+    marginBottom: theme.marginBottom.one,
+  },
+  marginTwo: {
+    marginBottom: theme.marginBottom.two,
+  },
+  marginThree:{
+    marginBottom: theme.marginBottom.three,
+  }
 });
 
-const Text = ({ color, fontSize, fontWeight, style, ...props }) => {
+const Text = ({ color, fontSize, fontWeight, style, marginBottom, ...props }) => {
   const textStyle = [
     styles.text,
     color === 'textSecondary' && styles.colorTextSecondary,
     color === 'primary' && styles.colorPrimary,
     fontSize === 'subheading' && styles.fontSizeSubheading,
     fontWeight === 'bold' && styles.fontWeightBold,
+    marginBottom === "mb-one" && styles.marginOne,
+    marginBottom === "mb-two" && styles.marginTwo,
+    marginBottom === "mb-three" && styles.marginThree,
     style,
   ];
   return <NativeText style={textStyle} {...props}/>;

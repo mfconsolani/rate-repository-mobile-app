@@ -16,6 +16,13 @@ const theme = {
     normal: '400',
     bold: '700',
   },
+  marginBottom:{
+    one: 2,
+    two: 4,
+    three: 6,
+    four: 8,
+    five: 10
+  }
 };
 
 export default theme;
