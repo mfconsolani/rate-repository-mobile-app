@@ -1,15 +1,17 @@
 // import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import Main from './src/components/Main';
-
-import { View } from 'react-native';
-// import { StyleSheet, Text, View, Pressable, Alert } from 'react-native';
+import { NativeRouter } from 'react-router-native';
 
 const App = () => {
   return (
-    <View>
-      <Main/>
-    </View>
+    <>
+      <NativeRouter>
+        <Main />
+      </NativeRouter>
+      <StatusBar style="light"/>
+    </>
   );
 };
 
