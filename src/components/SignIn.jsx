@@ -9,14 +9,14 @@ const SignInForm = ({onSubmit}) => {
 
   const passwordRef = useRef();
 
+
   return (
     <>
       <FormikTextInput 
       name="username" 
       placeholder="Username" 
-      returnKeyType="next"
       autoFocus={true}
-      onSubmitEditing={() => passwordRef.current.focus()}/>
+      onSubmitEditing={() => passwordRef.current?.focus()}/>
       
       <FormikTextInput 
       name="password" 

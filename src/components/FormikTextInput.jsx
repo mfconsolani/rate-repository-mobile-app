@@ -1,7 +1,6 @@
 import React from 'react';
-import TextInput from './TextInput';
 import Text from './Text';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 import { useField } from 'formik';
 
 const styles = StyleSheet.create({
@@ -10,13 +9,14 @@ const styles = StyleSheet.create({
   }
 });
 
-const FormikTextInput = ({ name, ...props }) => {
-  const [field, meta, helpers] = useField(name);
+const FormikTextInput = React.forwardRef((props, ref) => {
+  const [field, meta, helpers] = useField(props.name);
   const showError = meta.touched && meta.error;
 
   return (
     <>
       <TextInput
+        ref={ref}
         onChangeText={value => helpers.setValue(value)}
         onBlur={()=> helpers.setTouched(true)}
         value={field.value}
@@ -27,6 +27,8 @@ const FormikTextInput = ({ name, ...props }) => {
       {showError && <Text style={styles.errorText}>{meta.error}</Text>}
     </>
   );
-};
+});
+
+FormikTextInput.displayName = "FormikInputText";
 
 export default FormikTextInput;
