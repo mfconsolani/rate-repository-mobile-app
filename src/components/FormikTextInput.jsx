@@ -18,10 +18,9 @@ const FormikTextInput = React.forwardRef((props, ref) => {
       <TextInput
         ref={ref}
         onChangeText={value => helpers.setValue(value)}
-        onBlur={()=> helpers.setTouched(true)}
+        onBlur={() => helpers.setTouched(true)}
         value={field.value}
         error={showError}
-      
         {...props}
       />
       {showError && <Text style={styles.errorText}>{meta.error}</Text>}

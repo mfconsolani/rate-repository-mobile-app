@@ -61,9 +61,7 @@ const SignInForm = ({ onSubmit }) => {
         style={styles.inputButton}
         onPress={onSubmit}>
         <Text
-          style={styles.buttonText}
-
-        >
+          style={styles.buttonText}>
           Sign In
         </Text>
       </Pressable>
