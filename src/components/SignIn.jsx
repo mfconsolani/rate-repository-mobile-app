@@ -22,7 +22,6 @@ const SignInForm = ({ onSubmit }) => {
         placeholder="Username"
         // autoFocus={true}
         onSubmitEditing={() => passwordRef.current?.focus()}
-        style={styles.inputField}
       />
 
       <FormikTextInput
@@ -30,7 +29,6 @@ const SignInForm = ({ onSubmit }) => {
         secureTextEntry
         // autoFocus={true}
         placeholder="Password"
-        style={styles.inputField}
         ref={passwordRef}
       />
 
@@ -65,16 +63,6 @@ const SignIn = () => {
 };
 
 const styles = StyleSheet.create({
-  inputField: {
-    flexGrow: 1,
-    flexShrink: 1,
-    margin: 10,
-    borderStyle: "solid",
-    borderColor: "#bbb",
-    borderRadius: 5,
-    borderWidth: 2,
-    padding: 10
-  },
   inputButton: {
     backgroundColor: theme.colors.primary,
     flexGrow: 1,
