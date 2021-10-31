@@ -6,14 +6,14 @@ import { useField } from 'formik';
 const styles = StyleSheet.create({
   errorText: {
     // marginTop: 5,
-    color: "red",
+    color: "#d73a4a",
     paddingLeft: 14,
     paddingTop: 0,
     margin: 0,
     fontSize: 12,
   }, 
   borderError: {
-    borderColor: 'red',
+    borderColor: '#d73a4a',
     borderStyle: "solid",
     borderRadius: 5,
     borderWidth: 2,
